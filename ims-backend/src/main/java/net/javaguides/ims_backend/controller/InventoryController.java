@@ -1,6 +1,5 @@
 package net.javaguides.ims_backend.controller;
 
-import net.javaguides.ims_backend.dto.InventoryRegistrationDto;
 import net.javaguides.ims_backend.entity.Inventory;
 import net.javaguides.ims_backend.service.InventoryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,19 +8,13 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*") // Allow requests from React frontend
 @RestController
 @RequestMapping("/api/inventory")
 public class InventoryController {
 
     @Autowired
     private InventoryService inventoryService;
-
-    // Create a new inventory item
-    @PostMapping
-    public ResponseEntity<Inventory> createInventory(@RequestBody InventoryRegistrationDto registrationDto) {
-        Inventory inventory = inventoryService.saveInventory(registrationDto);
-        return ResponseEntity.ok(inventory);
-    }
 
     // Get all inventory items
     @GetMapping
@@ -37,10 +30,17 @@ public class InventoryController {
         return ResponseEntity.ok(inventory);
     }
 
-    // Update an inventory item
+    // Add a new inventory item
+    @PostMapping
+    public ResponseEntity<Inventory> createInventory(@RequestBody Inventory inventory) {
+        Inventory savedInventory = inventoryService.saveInventory(inventory);
+        return ResponseEntity.ok(savedInventory);
+    }
+
+    // Update an existing inventory item
     @PutMapping("/{id}")
-    public ResponseEntity<Inventory> updateInventory(@PathVariable Long id, @RequestBody InventoryRegistrationDto registrationDto) {
-        Inventory updatedInventory = inventoryService.updateInventory(id, registrationDto);
+    public ResponseEntity<Inventory> updateInventory(@PathVariable Long id, @RequestBody Inventory inventory) {
+        Inventory updatedInventory = inventoryService.updateInventory(id, inventory);
         return ResponseEntity.ok(updatedInventory);
     }
 

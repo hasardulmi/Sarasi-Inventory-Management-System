@@ -1,6 +1,5 @@
 package net.javaguides.ims_backend.service;
 
-import net.javaguides.ims_backend.dto.InventoryRegistrationDto;
 import net.javaguides.ims_backend.entity.Inventory;
 import net.javaguides.ims_backend.repository.InventoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,18 +13,6 @@ public class InventoryService {
     @Autowired
     private InventoryRepository inventoryRepository;
 
-    // Save a new inventory item
-    public Inventory saveInventory(InventoryRegistrationDto registrationDto) {
-        Inventory inventory = new Inventory();
-        inventory.setInventoryName(registrationDto.getInventoryName());
-        inventory.setInventoryDescription(registrationDto.getInventoryDescription());
-        inventory.setInventoryCategory(registrationDto.getInventoryCategory());
-        inventory.setInventoryUnitPrice(registrationDto.getInventoryUnitPrice());
-        inventory.setInventoryQuantity(registrationDto.getInventoryQuantity());
-        inventory.setSupplierName(registrationDto.getSupplierName());
-        return inventoryRepository.save(inventory);
-    }
-
     // Get all inventory items
     public List<Inventory> getAllInventory() {
         return inventoryRepository.findAll();
@@ -36,16 +23,21 @@ public class InventoryService {
         return inventoryRepository.findById(id).orElse(null);
     }
 
-    // Update an inventory item
-    public Inventory updateInventory(Long id, InventoryRegistrationDto registrationDto) {
+    // Save a new inventory item
+    public Inventory saveInventory(Inventory inventory) {
+        return inventoryRepository.save(inventory);
+    }
+
+    // Update an existing inventory item
+    public Inventory updateInventory(Long id, Inventory inventory) {
         Inventory existingInventory = inventoryRepository.findById(id).orElse(null);
         if (existingInventory != null) {
-            existingInventory.setInventoryName(registrationDto.getInventoryName());
-            existingInventory.setInventoryDescription(registrationDto.getInventoryDescription());
-            existingInventory.setInventoryCategory(registrationDto.getInventoryCategory());
-            existingInventory.setInventoryUnitPrice(registrationDto.getInventoryUnitPrice());
-            existingInventory.setInventoryQuantity(registrationDto.getInventoryQuantity());
-            existingInventory.setSupplierName(registrationDto.getSupplierName());
+            existingInventory.setInventoryName(inventory.getInventoryName());
+            existingInventory.setInventoryDescription(inventory.getInventoryDescription());
+            existingInventory.setInventoryCategory(inventory.getInventoryCategory());
+            existingInventory.setInventoryUnitPrice(inventory.getInventoryUnitPrice());
+            existingInventory.setInventoryQuantity(inventory.getInventoryQuantity());
+            existingInventory.setSupplierName(inventory.getSupplierName());
             return inventoryRepository.save(existingInventory);
         }
         return null;
