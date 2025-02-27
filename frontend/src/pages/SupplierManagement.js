@@ -1,21 +1,21 @@
 import React from 'react';
 import { Typography, Box } from '@mui/material';
-import EmployeeNavbar from '../components/EmployeeNavbar';
+import OwnerNavbar from '../components/OwnerNavbar';
 
-const  EmployeeDashboard = () => {
+const SupplierManagement = () => {
     return (
         <>
-            <EmployeeNavbar />
+            <OwnerNavbar />
             <Box sx={{ p: 4 }}>
                 <Typography variant="h4" component="h1">
-                    Employee Dashboard
+                    Supplier Management
                 </Typography>
                 <Typography variant="body1">
-                    This is the Employee Dashboard page.
+                    This is the supplier Management page.
                 </Typography>
             </Box>
         </>
     );
 };
 
-export default  EmployeeDashboard;
+export default SupplierManagement;

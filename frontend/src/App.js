@@ -1,27 +1,40 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import NavBar from './components/Navbar';
-import Register from './pages/Register';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './pages/Login';
-import EmployeeDashboard from './pages/EmployeeDashboard';
+import Register from './pages/Register';
 import OwnerDashboard from './pages/OwnerDashboard';
+import InventoryManagement from './pages/InventoryManagement';
+import Profile from './pages/Profile';
+import SalesReport from './pages/SalesReport';
+import SupplierManagement from './pages/SupplierManagement';
+import ViewReport from './pages/ViewReport';
+import EmployeeManagement from './pages/EmployeeManagement';
+import EmployeeDashboard from './pages/EmployeeDashboard';
+import EmployeeProfile from './pages/EmployeeProfile';
+import EmployeeSalesReport from './pages/EmployeeSalesReport';
+
+
 
 const App = () => {
     return (
         <Router>
-            <NavBar />
-            <div style={{ paddingTop: '64px' }}> {/* Adjust padding if NavBar height is different */}
-                <Routes>
-                    {/* Default route redirects to /register */}
-                    <Route path="/" element={<Navigate to="/register" />} />
+            <Routes>
+                <Route path="/" element={<Register />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/owner-dashboard" element={<OwnerDashboard />} />
+                <Route path="/inventoryManagement" element={<InventoryManagement />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/report" element={<SalesReport />} />
+                <Route path="/view" element={<ViewReport />} />
+                <Route path="/employeeManagement" element={<EmployeeManagement />} />
+                <Route path="/supplierManagement" element={<SupplierManagement />} />
+                <Route path="/employee-dashboard" element={<EmployeeDashboard />} />
+                <Route path="/EmployeeProfile" element={<EmployeeProfile />} />
+                <Route path="/EmployeeSalesReport" element={<EmployeeSalesReport />} />
 
-                    {/* Other routes */}
-                    <Route path="/register" element={<Register />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/employee-dashboard" element={<EmployeeDashboard />} />
-                    <Route path="/owner-dashboard"  element={<OwnerDashboard />} />
-                </Routes>
-            </div>
+
+            </Routes>
         </Router>
     );
 };

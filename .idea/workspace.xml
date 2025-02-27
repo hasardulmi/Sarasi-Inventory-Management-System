@@ -4,7 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2310ee0b-046b-4e9d-9e1b-148b591338cd" name="Changes" comment="owner and employee logins backends are successfully developed" />
+    <list default="true" id="2310ee0b-046b-4e9d-9e1b-148b591338cd" name="Changes" comment="owner and employee logins backends are successfully developed">
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/EmployeeLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/EmployeeNavbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/OwnerLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/OwnerNavbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/EmployeeManagement.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/EmployeeProfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/EmployeeSalesReport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/InventoryManagement.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Profile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/SalesReport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/SupplierManagement.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/ViewReport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/EmployeeDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/EmployeeDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/OwnerDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/OwnerDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Register.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -188,7 +207,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740616988471</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="owner and employee logins backends are successfully developed">
+      <option name="closed" value="true" />
+      <created>1740617450100</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1740617450100</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Container, TextField, Button, Typography, Box, Grid, Paper } from '@mui/material';
 import LockIcon from '@mui/icons-material/Lock';
+import Navbar from '../components/Navbar';
 
 const Login = () => {
     const [formData, setFormData] = useState({
@@ -48,6 +49,8 @@ const Login = () => {
     };
 
     return (
+        <>
+            <Navbar />
         <Container maxWidth="sm">
             <Box
                 sx={{
@@ -108,6 +111,7 @@ const Login = () => {
                 </Paper>
             </Box>
         </Container>
+            </>
     );
 };
 
