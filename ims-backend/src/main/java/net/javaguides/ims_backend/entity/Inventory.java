@@ -1,11 +1,7 @@
 package net.javaguides.ims_backend.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
-
-import static net.javaguides.ims_backend.entity.UserType.EMPLOYEE;
-import static net.javaguides.ims_backend.entity.UserType.OWNER;
-
+import lombok.Data;
 
 @Data
 @Entity
@@ -22,6 +18,4 @@ public class Inventory {
     private String inventoryUnitPrice;
     private String inventoryQuantity;
     private String supplierName;
-
-
-};
+}
