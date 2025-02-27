@@ -11,6 +11,7 @@ const Login = () => {
     });
     const [error, setError] = useState('');
     const navigate = useNavigate();
+
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -21,15 +22,28 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
+            // Send a POST request to your backend API for authentication
             const response = await axios.post('http://localhost:8080/api/users/login', formData);
-            if (response.status === 200) {
-                navigate('/dashboard'); // Navigate to the dashboard on successful login
+            console.log('Backend Response:', response.data); // Log the response for debugging
+
+            // Check if the login was successful
+            if (response.data.message === 'Login successful') {
+                const { userType } = response.data;
+
+                // Navigate based on userType
+                if (userType === 'OWNER') {
+                    navigate('/owner-dashboard'); // Redirect to Owner Dashboard
+                } else if (userType === 'EMPLOYEE') {
+                    navigate('/employee-dashboard'); // Redirect to Employee Dashboard
+                } else {
+                    setError('Invalid user type'); // Handle unexpected userType
+                }
             } else {
                 setError('Invalid credentials');
             }
         } catch (error) {
-            console.error(error);
-            setError('There is an error!.');
+            console.error('Login Error:', error); // Log the error for debugging
+            setError('Invalid credentials or there was an error.');
         }
     };
 

@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import NavBar from './components/Navbar';
 import Register from './pages/Register';
 import Login from './pages/Login';
-import Dashboard from './pages/Dashboard';
-
+import EmployeeDashboard from './pages/EmployeeDashboard';
+import OwnerDashboard from './pages/OwnerDashboard';
 
 const App = () => {
     return (
@@ -18,7 +18,8 @@ const App = () => {
                     {/* Other routes */}
                     <Route path="/register" element={<Register />} />
                     <Route path="/login" element={<Login />} />
-                    <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/employee-dashboard" element={<EmployeeDashboard />} />
+                    <Route path="/owner-dashboard"  element={<OwnerDashboard />} />
                 </Routes>
             </div>
         </Router>

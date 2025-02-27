@@ -80,12 +80,17 @@ public class UserService {
     }
 
 
-
-
+    public User authenticate(String username, String password) {
+        User user = userRepository.findByUsername(username);
+        if (user != null && passwordEncoder.matches(password, user.getPassword())) {
+            return user; // Return the user if credentials are valid
+        }
+        return null; // Return null if credentials are invalid
+    }
 
     public String loginUser(LoginDto loginDto) {
-        User user = userRepository.findByUsername(loginDto.getUsername());
-        if (user != null && passwordEncoder.matches(loginDto.getPassword(), user.getPassword())) { // Use passwordEncoder to match the password
+        User user = authenticate(loginDto.getUsername(), loginDto.getPassword());
+        if (user != null) {
             return "Login successful";
         } else {
             return "Invalid credentials";

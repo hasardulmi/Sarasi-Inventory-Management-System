@@ -3,6 +3,8 @@ package net.javaguides.ims_backend.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import static net.javaguides.ims_backend.entity.UserType.EMPLOYEE;
+import static net.javaguides.ims_backend.entity.UserType.OWNER;
 
 
 @Data
@@ -26,6 +28,12 @@ public class User {
     @Enumerated(EnumType.STRING)
     private UserType userType;
 
+    public UserType getUserType() {
+        return userType;
+    }
 
+    public void setUserType(UserType userType) {
+        this.userType = userType;
+    }
 }
 

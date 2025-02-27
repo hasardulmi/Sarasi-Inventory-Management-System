@@ -12,7 +12,6 @@ const Register = () => {
         email: '',
         phone: '',
         address: '',
-
         userType: 'EMPLOYEE'
     });
 
@@ -41,7 +40,6 @@ const Register = () => {
     return (
         <Box
             sx={{
-                display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 minHeight: '100vh'
@@ -157,6 +155,7 @@ const Register = () => {
                                 <FormControl fullWidth margin="normal">
                                     <InputLabel>User Type</InputLabel>
                                     <Select
+                                        name="userType"
                                         value={formData.userType}
                                         onChange={handleChange}
                                         required
