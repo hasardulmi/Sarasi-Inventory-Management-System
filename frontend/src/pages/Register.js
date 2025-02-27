@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Container, TextField, Button, Typography, Box, MenuItem, Select, InputLabel, FormControl, Grid, Paper } from '@mui/material';
 import LocalMallIcon from '@mui/icons-material/LocalMall'; // Shop-related icon
+import Navbar from '../components/Navbar';
 
 const Register = () => {
     const [formData, setFormData] = useState({
@@ -38,6 +39,8 @@ const Register = () => {
     };
 
     return (
+        <>
+        <Navbar />
         <Box
             sx={{
                 alignItems: 'center',
@@ -179,6 +182,7 @@ const Register = () => {
                 </Paper>
             </Container>
         </Box>
+        </>
     );
 };
 

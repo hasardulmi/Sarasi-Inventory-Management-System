@@ -1,16 +1,20 @@
 import React from 'react';
 import { Typography, Box } from '@mui/material';
+import OwnerNavbar from '../components/OwnerNavbar';
 
-const OwnerDashboard = () => {
+const  OwnerDashboard = () => {
     return (
-        <Box sx={{ p: 4 }}>
-            <Typography variant="h4" component="h1">
-                Owner Dashboard
-            </Typography>
-            <Typography variant="body1">
-                Welcome to the Owner Dashboard!
-            </Typography>
-        </Box>
+        <>
+            <OwnerNavbar />
+            <Box sx={{ p: 4 }}>
+                <Typography variant="h4" component="h1">
+                    Owner Dashboard
+                </Typography>
+                <Typography variant="body1">
+                    This is the Owner Dashboard page.
+                </Typography>
+            </Box>
+        </>
     );
 };
 

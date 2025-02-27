@@ -4,19 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2310ee0b-046b-4e9d-9e1b-148b591338cd" name="Changes" comment="backend files are uploading">
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/EmployeeDashboard.js" afterDir="false" />
+    <list default="true" id="2310ee0b-046b-4e9d-9e1b-148b591338cd" name="Changes" comment="owner and employee logins backends are successfully developed">
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/EmployeeLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/EmployeeNavbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/OwnerLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/OwnerNavbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/EmployeeManagement.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/EmployeeProfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/EmployeeSalesReport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/InventoryManagement.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Profile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/SalesReport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/SupplierManagement.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/ViewReport.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/OwnerDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/EmployeeDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/EmployeeDashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/OwnerDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/OwnerDashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ims-backend/src/main/java/net/javaguides/ims_backend/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ims-backend/src/main/java/net/javaguides/ims_backend/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ims-backend/src/main/java/net/javaguides/ims_backend/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/ims-backend/src/main/java/net/javaguides/ims_backend/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ims-backend/src/main/java/net/javaguides/ims_backend/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ims-backend/src/main/java/net/javaguides/ims_backend/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ims-backend/target/classes/net/javaguides/ims_backend/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ims-backend/target/classes/net/javaguides/ims_backend/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ims-backend/target/classes/net/javaguides/ims_backend/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/ims-backend/target/classes/net/javaguides/ims_backend/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ims-backend/target/classes/net/javaguides/ims_backend/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ims-backend/target/classes/net/javaguides/ims_backend/service/UserService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +191,31 @@
       <option name="project" value="LOCAL" />
       <updated>1740562711294</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="owner and employee logins frontends are successfully developed">
+      <option name="closed" value="true" />
+      <created>1740616941496</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1740616941496</updated>
+    </task>
+    <task id="LOCAL-00005" summary="owner and employee logins backends are successfully developed">
+      <option name="closed" value="true" />
+      <created>1740616988471</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1740616988471</updated>
+    </task>
+    <task id="LOCAL-00006" summary="owner and employee logins backends are successfully developed">
+      <option name="closed" value="true" />
+      <created>1740617450100</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1740617450100</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +226,8 @@
     <MESSAGE value="frontend files are working" />
     <MESSAGE value="frontend files are uploading" />
     <MESSAGE value="backend files are uploading" />
-    <option name="LAST_COMMIT_MESSAGE" value="backend files are uploading" />
+    <MESSAGE value="owner and employee logins frontends are successfully developed" />
+    <MESSAGE value="owner and employee logins backends are successfully developed" />
+    <option name="LAST_COMMIT_MESSAGE" value="owner and employee logins backends are successfully developed" />
   </component>
 </project>
